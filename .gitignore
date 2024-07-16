@@ -1,8 +1,7 @@
-.Program1\lex\a.out
-.Program1\lex\lex.yy.c
-.Program2\lex\a.out
-.Program2\lex\lex.yy.c
-.Program3\lex\a.out
-.Program3\lex\lex.yy.c
-.Program4\a.out
-.Program4\lex.yy.c
+./Program1/lex/a.out
+.Program1/lex/lex.yy.c
+.Program2/lex/a.out
+.Program2/lex/lex.yy.c
+.Program3/lex/a.out
+.Program3/lex/lex.yy.c
+.Program4/a.out
