@@ -7,7 +7,7 @@
 <ol>
     <li>Program 1:&nbsp;<ol>
             <li>Write a LEX program to count number of words, lines, characters and whitespaces in a given paragraph.</li>
-            <li>Write a YACC program to recognize strings of the form anbn+mcm, n,m&gt;=0.</li>
+            <li>Write a YACC program to recognize strings of the form a^nb^(n+m)c^m, n,m&gt;=0.</li>
         </ol>
     </li>
     <li>Program 2:<ol>
