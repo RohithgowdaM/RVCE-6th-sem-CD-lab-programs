@@ -33,3 +33,41 @@
     <li>Program 7: Write a YACC program that identifies the Function Definition of C language.</li>
     <li>Program 8: Write a YACC program that generates Assembly language (Target) Code for valid Arithmetic Expression.</li>
 </ol>
+
+## LLVM Programs
+
+### Program 6
+
+This program is to print the unoptimised and optimised code for a bubble sort code
+
+```bash
+# to print the unoptimised assembly code
+clang filename.c -S -emit-llvm -o filename
+
+# to print the optimised assembly code
+clang filename.c -S -emit-llvm -o filename -O3
+```
+
+### Program 7
+
+This program is to print the unoptimised and optimised code for a binary search code
+
+```bash
+# to print the unoptimised assembly code
+clang filename.c -S -emit-llvm -o filename
+
+# to print the optimised assembly code
+clang filename.c -S -emit-llvm -o filename -O3
+```
+
+### Program 8
+
+this is about loop unrolling
+
+```bash
+# comment out the unroll pragma to see the difference
+clang filename.c -S -emit-llvm -o filename
+
+# for unrolled optimisation
+clang filename.c -S -emit-llvm -o filename -O3
+```
