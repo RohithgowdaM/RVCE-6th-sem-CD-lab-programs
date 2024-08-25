@@ -1,17 +1,27 @@
 %{
-    #include "y.tab.h"
+#include "y.tab.h"
 %}
 
 %%
-[\t\n ] ;
 
-"int"|"float"|"char"|"void" {return TYPE;}
+"int"|"void"|"char"|"float"|"double"  { return TYP; }
+"return"                              { return RETURN; }
+[a-zA-Z_][a-zA-Z0-9_]*                { return ID; }
+"("                                   { return LP; }
+")"                                   { return RP; }
+"{"                                   { return LB; }
+"}"                                   { return RB; }
+";"                                   { return SC; }
+","                                   { return CM; }
+"="                                   { return EQ; }
+"+"|"-"|"*"|"/"                       { return OP; }
+[0-9]+                                { return NUM; }
 
-"return" {return RET;}
+[ \t\n]                               { /* ignore whitespace */ }
+.                                     { /* ignore other characters */ }
 
-[a-zA-Z][a-zA-Z0-9_]* {return IDEN;}
-
-[0-9]+ {return NUM;}
-
-. {return yytext[0];}
 %%
+
+int yywrap(void) {
+    return 1;
+}
