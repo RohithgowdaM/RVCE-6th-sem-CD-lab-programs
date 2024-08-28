@@ -55,7 +55,7 @@ int yyerror() {
 }
 
 int main() {
-	// yyin = fopen("6.txt", "r"); 
+	yyin = fopen("6.txt", "r"); 
 	// Only if input is given from text file
 	yyparse();
 
