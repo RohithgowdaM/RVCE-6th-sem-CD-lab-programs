@@ -1,21 +1,14 @@
 %{
     #include<stdio.h>
     #include<stdlib.h>
-
-    int cnt = 0;            // Tracks the total number of `if` statements
-    int currentDepth = 0;    // Tracks the current nesting depth
+    int cnt = 0;
 %}
 
 %token IF IDEN NUM
 
 %%
 
-S : J
-  ;
-
-J:J I
-|
-;
+S:I {printf("The number of levels is:%d \n",cnt);}  ;
 
 I : IF A B {
         cnt++;
@@ -40,10 +33,10 @@ Z : '='
   | '-'
   ;
 
-B : '{' B '}'
+B : '{' B B '}' 
   | I
-  | E ';'
-  | /* empty */
+  | E ';' 
+  | 
   ;
 
 %%

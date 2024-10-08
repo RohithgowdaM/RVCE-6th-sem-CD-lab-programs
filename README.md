@@ -2,72 +2,50 @@
 
 <p>RV College of Engineering, Bengaluru</p>
 <p><strong><span style="font-family: serif; font-size: 28px;">Compiler Design(21CS63)</span></strong></p>
+
 ![Lab Programs for CIE and SEE](https://docs.google.com/document/d/1sYfEx-RTlhu14UrSVViqbGywJfuFdXIo/edit)
+
 <p><br></p>
-<ol>
-    <li>Program 1:&nbsp;<ol>
-            <li>Write a LEX program to count number of words, lines, characters and whitespaces in a given paragraph.</li>
-            <li>Write a YACC program to recognize strings of the form a^nb^(n+m)c^m, n,m&gt;=0.</li>
-        </ol>
-    </li>
-    <li>Program 2:<ol>
-            <li>Write a LEX program to count number of Positive and Negative integers and Positive &amp; Negative fractions.</li>
-            <li>Write a YACC program to validate and evaluate a simple expression involving operators +,- , * and /.</li>
-        </ol>
-    </li>
-    <li>Program 3:<ol>
-            <li>Write a LEX program to count the number of comment lines in a C Program. Also eliminate them and copy that program into a separate file.</li>
-            <li>Write a YACC program to recognize a nested (minimum3levels)FOR loop statement for C language.</li>
-        </ol>
-    </li>
-    <li>Program 4:<ol>
-            <li>Write a LEX program to recognize and count the number of identifiers, operators and keywords in a given input file.</li>
-            <li>Write a YACC program to recognize nested IF control statements (C language) and display the number of levels of nesting.</li>
-        </ol>
-    </li>
-    <li>Program 5: Write a YACC program to recognize Declaration statement (C language) and display the number variables declared .
-    Variable can be any basic data type  or array type
-    Example int a[10],a,b,c;  
-    </li>
-    <li>Program 6: YACC program that reads the C statements for an input file and converts them in quadruple three address intermediate code.</li>
-    <li>Program 7: Write a YACC program that identifies the Function Definition of C language.</li>
-    <li>Program 8: Write a YACC program that generates Assembly language (Target) Code for valid Arithmetic Expression.</li>
-</ol>
+
+## Lab Programs
+
+1. **Program 1:**
+   - Write a LEX program to count the number of words, lines, characters, and whitespaces in a given paragraph.
+   - Write a YACC program to recognize strings of the form \(a^nb^{(n+m)}c^m\), \(n,m \geq 0\).
+
+2. **Program 2:**
+   - Write a LEX program to count the number of positive and negative integers and positive & negative fractions.
+   - Write a YACC program to validate and evaluate a simple expression involving operators +, -, *, and /.
+
+3. **Program 3:**
+   - Write a LEX program to count the number of comment lines in a C Program. Also, eliminate them and copy that program into a separate file.
+   - Write a YACC program to recognize a nested (minimum 3 levels) FOR loop statement for C language.
+
+4. **Program 4:**
+   - Write a LEX program to recognize and count the number of identifiers, operators, and keywords in a given input file.
+   - Write a YACC program to recognize nested IF control statements (C language) and display the number of levels of nesting.
+
+5. **Program 5:**
+   - Write a YACC program to recognize declaration statements (C language) and display the number of variables declared. Variables can be any basic data type or array type (e.g., `int a[10], a, b, c;`).
+
+6. **Program 6:**
+   - YACC program that reads the C statements for an input file and converts them into quadruple three-address intermediate code.
+
+7. **Program 7:**
+   - Write a YACC program that identifies the function definition of the C language.
+
+8. **Program 8:**
+   - Write a YACC program that generates assembly language (Target) code for valid arithmetic expressions.
 
 ## LLVM Programs
 
-### Program 6
+### Program 6: Bubble Sort
 
-This program is to print the unoptimised and optimised code for a bubble sort code
-
-```bash
-# to print the unoptimised assembly code
-clang filename.c -S -emit-llvm -o filename
-
-# to print the optimised assembly code
-clang filename.c -S -emit-llvm -o filename -O3
-```
-
-### Program 7
-
-This program is to print the unoptimised and optimised code for a binary search code
+This program is to print the unoptimized and optimized code for a bubble sort code.
 
 ```bash
-# to print the unoptimised assembly code
-clang filename.c -S -emit-llvm -o filename
+# To print the unoptimized assembly code
+clang filename.c -S -emit-llvm -o filename.ll
 
-# to print the optimised assembly code
-clang filename.c -S -emit-llvm -o filename -O3
-```
-
-### Program 8
-
-this is about loop unrolling
-
-```bash
-# comment out the unroll pragma to see the difference
-clang filename.c -S -emit-llvm -o filename
-
-# for unrolled optimisation
-clang filename.c -S -emit-llvm -o filename -O3
-```
+# To print the optimized assembly code
+clang filename.c -S -emit-llvm -o filename.ll -O3
