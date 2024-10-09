@@ -3,7 +3,6 @@
 <p>RV College of Engineering, Bengaluru</p>
 <p><strong><span style="font-family: serif; font-size: 28px;">Compiler Design(21CS63)</span></strong></p>
 
-![Lab Programs for CIE and SEE](https://docs.google.com/document/d/1sYfEx-RTlhu14UrSVViqbGywJfuFdXIo/edit)
 
 <p><br></p>
 
